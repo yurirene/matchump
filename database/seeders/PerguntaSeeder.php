@@ -52,22 +52,22 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 5,
-                'texto' => 'O que você mais valoriza na fé?',
+                'texto' => 'Em qual dessas atividades você mais se envolve naturalmente na sua vida cristã?',
                 'opcoes' => [
-                    'A' => 'Relacionamento com Deus',
-                    'B' => 'Comunhão com a igreja',
-                    'C' => 'Conhecimento bíblico',
-                    'D' => 'Serviço ao próximo',
+                    'A' => 'Momentos pessoais como oração, leitura bíblica e devocional',
+                    'B' => 'Estar com pessoas da igreja (cultos, grupos, comunhão)',
+                    'C' => 'Estudar e aprender mais sobre a Bíblia e a fé',
+                    'D' => 'Ajudar e servir outras pessoas na prática',
                 ],
             ],
             [
                 'ordem' => 6,
-                'texto' => 'Você gostaria que seu amigo(a) ou parceiro(a):',
+                'texto' => 'Na prática, como você espera que a fé esteja presente na sua relação com um amigo(a) ou parceiro(a)?',
                 'opcoes' => [
-                    'A' => 'Caminhasse espiritualmente junto comigo',
-                    'B' => 'Me incentivasse na fé',
-                    'C' => 'Respeitasse minha fé',
-                    'D' => 'Ainda estou entendendo isso',
+                    'A' => 'Vivendo juntos a fé (orações, conversas espirituais, crescimento em conjunto)',
+                    'B' => 'Apoiando e incentivando um ao outro na caminhada',
+                    'C' => 'Cada um com sua vivência, mas com respeito mútuo',
+                    'D' => 'Ainda estou descobrindo como isso se encaixa',
                 ],
             ],
             [
@@ -182,17 +182,17 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 18,
-                'texto' => 'Em relacionamentos você:',
+                'texto' => 'Em relacionamentos você se conecta:',
                 'opcoes' => [
-                    'A' => 'Se conecta fácil',
-                    'B' => 'Equilibrado',
-                    'C' => 'Receio',
-                    'D' => 'Evita',
+                    'A' => 'Com facilidade',
+                    'B' => 'Com equilíbrio',
+                    'C' => 'Com dificuldade',
+                    'D' => 'Não se conecta',
                 ],
             ],
             [
                 'ordem' => 19,
-                'texto' => 'Espaço pessoal:',
+                'texto' => 'Você precisa de quanto espaço pessoal? :',
                 'opcoes' => [
                     'A' => 'Pouco',
                     'B' => 'Moderado',
