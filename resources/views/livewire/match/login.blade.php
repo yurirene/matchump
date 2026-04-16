@@ -60,13 +60,6 @@
                     <input type="checkbox" wire:model="remember" class="h-4 w-4 rounded border-heart-border text-heart-primary focus:ring-heart-primary/30">
                     Lembrar-me neste dispositivo
                 </label>
-
-                <div class="rounded-lg bg-heart-muted p-3 text-sm">
-                    <p class="mb-1.5 text-heart-muted-foreground">Ambiente de teste (após <code class="rounded bg-white/80 px-1 py-0.5 text-xs">php artisan migrate --seed</code>):</p>
-                    <p class="font-medium text-heart-foreground">Use um e-mail gerado pelo seeder de <span class="text-heart-primary">match_users</span></p>
-                    <p class="font-medium text-heart-foreground">Senha: <span class="select-all">password</span></p>
-                </div>
-
                 <button
                     type="submit"
                     class="flex h-10 w-full items-center justify-center rounded-md bg-heart-primary text-sm font-semibold text-heart-primary-foreground shadow transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-60"
