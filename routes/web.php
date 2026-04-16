@@ -7,12 +7,20 @@ use App\Livewire\DelegadoAtas;
 use App\Livewire\DelegadoComissoes;
 use App\Livewire\DelegadoDocumentos;
 use App\Livewire\DelegadoHome;
-use App\Livewire\DelegateLogin;
 use App\Livewire\DelegateManagement;
 use App\Livewire\DocumentManagement;
 use App\Livewire\PresenceManagement;
 use App\Livewire\SessionManagement;
+use App\Livewire\Match\Dashboard as MatchDashboard;
+use App\Livewire\Match\Discovery as MatchDiscovery;
+use App\Livewire\Match\Login as MatchLogin;
+use App\Livewire\Match\MatchDetalhe as MatchDetalhe;
+use App\Livewire\Match\Matches as MatchMatches;
+use App\Livewire\Match\Perfil as MatchPerfil;
+use App\Livewire\Match\Questionario as MatchQuestionario;
+use App\Livewire\Match\Register as MatchRegister;
 use App\Livewire\SyncUnidades;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,30 +38,33 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/delegados-login', DelegateLogin::class)->name('login.delegados');
-Route::middleware(['auth:delegados'])
-    ->prefix('area-delegado')
-    ->name('area-delegado.')
-    ->group(function () {
-        Route::get('/', DelegadoHome::class)->name('home');
-        Route::get('/documentos', DelegadoDocumentos::class)->name('documentos');
-        Route::get('/comissoes', DelegadoComissoes::class)->name('comissoes');
-        Route::get('/atas', DelegadoAtas::class)->name('atas');
-    }
-);
+Route::redirect('/matches', '/match/matches');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware('guest:match')->group(function () {
+    Route::get('/login', MatchLogin::class)->name('login');
+    Route::get('/register', MatchRegister::class)->name('register');
+});
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/unidades', SyncUnidades::class)->name('unidades.index');
-    Route::get('/delegados', DelegateManagement::class)->name('delegados.index');
-    Route::get('/sessoes', SessionManagement::class)->name('sessoes.index');
-    Route::get('/sessoes/{sessaoId}/presencas', PresenceManagement::class)->name('sessoes.presenca');
-    Route::get('/comissoes', CommissionManagement::class)->name('comissoes.index');
-    Route::get('/documentos', DocumentManagement::class)->name('documentos.index');
-    Route::get('/atas', Atas::class)->name('atas.index');
+Route::permanentRedirect('/match/login', '/login');
+Route::permanentRedirect('/match/register', '/register');
+
+Route::prefix('match')->name('match.')->group(function () {
+    Route::middleware('auth:match')->group(function () {
+        Route::post('/logout', function () {
+            Auth::guard('match')->logout();
+            request()->session()->invalidate();
+            request()->session()->regenerateToken();
+
+            return redirect()->route('login');
+        })->name('logout');
+
+        Route::get('/dashboard', MatchDashboard::class)->name('dashboard');
+        Route::get('/questionario', MatchQuestionario::class)->name('questionario');
+        Route::get('/matches', MatchMatches::class)->name('matches');
+        Route::get('/ver/{alvo}', MatchDetalhe::class)->name('detalhe');
+        Route::get('/discovery', MatchDiscovery::class)->name('discovery');
+        Route::get('/perfil', MatchPerfil::class)->name('perfil');
+    });
 });
 
 require __DIR__.'/auth.php';

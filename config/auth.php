@@ -40,9 +40,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'delegados' => [
+        'match' => [
             'driver' => 'session',
-            'provider' => 'delegados',
+            'provider' => 'match_users',
         ],
     ],
 
@@ -68,9 +68,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'delegados' => [
+        'match_users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Delegado::class,
+            'model' => App\Models\MatchUser::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

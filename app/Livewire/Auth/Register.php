@@ -15,7 +15,6 @@ class Register extends Component
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
-    public string $tenant_id = '';
 
     public function register()
     {
@@ -25,7 +24,6 @@ class Register extends Component
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'tenant_id' => ['required', 'uuid', 'unique:users'],
         ]);
 
         $key = 'register_attempts_' . request()->ip();
@@ -41,23 +39,11 @@ class Register extends Component
 
         cache()->put($key, $attempts + 1, $decay);
 
-        $apiService = new ExternalApiService();
-        $validToken = $apiService->validarToken($this->tenant_id);
-        if (!$validToken) {
-            throw ValidationException::withMessages([
-                'tenant_id' => 'Token inválido',
-            ]);
-        }
-
-        $sinodal = $apiService->isSinodal($this->tenant_id);
-
         $user = $creator->create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => $this->password,
             'password_confirmation' => $this->password_confirmation,
-            'tenant_id' => $this->tenant_id,
-            'sinodal' => $sinodal,
         ]);
 
         Auth::login($user);

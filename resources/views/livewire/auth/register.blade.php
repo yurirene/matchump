@@ -13,6 +13,14 @@
         @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
     </div>
 
+
+    <div class="mb-3">
+        <label for="birth_date" class="form-label">Data de nascimento</label>
+        <input wire:model.defer="birth_date" type="date" class="form-control @error('birth_date') is-invalid @enderror" id="birth_date" name="birth_date" required autocomplete="birth_date">
+        @error('birth_date') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+
     <div class="mb-3">
         <label for="password" class="form-label">Senha</label>
         <input wire:model.defer="password" type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required autocomplete="new-password">
@@ -25,17 +33,11 @@
         @error('password_confirmation') <div class="invalid-feedback">{{ $message }}</div> @enderror
     </div>
 
-    <div class="mb-3">
-        <label for="tenant_id" class="form-label">Token</label>
-        <input wire:model.defer="tenant_id" type="text" class="form-control @error('tenant_id') is-invalid @enderror" id="tenant_id" name="tenant_id" required autocomplete="tenant_id">
-        @error('tenant_id') <div class="invalid-feedback">{{ $message }}</div> @enderror
-    </div>
-
     <div class="d-grid gap-2">
         <button type="submit" class="btn btn-primary">Registrar</button>
     </div>
 
     <div class="text-center mt-3">
-        <a class="text-decoration-none" href="{{ route('login') }}">Já tem uma conta? Faça login</a>
+        <a class="text-decoration-none" href="{{ route('diretoria.login') }}">Já tem uma conta? Faça login</a>
     </div>
 </form>
