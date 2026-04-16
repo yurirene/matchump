@@ -38,6 +38,6 @@
     </div>
 
     <div class="text-center mt-3">
-        <a class="text-decoration-none" href="{{ route('match.login') }}">Já tem uma conta? Faça login</a>
+        <a class="text-decoration-none" href="{{ route('login') }}">Já tem uma conta? Faça login</a>
     </div>
 </form>

@@ -44,6 +44,6 @@ class Login extends Component
 
     public function render()
     {
-        return view('livewire.match.login');
+        return view('livewire.login');
     }
 }

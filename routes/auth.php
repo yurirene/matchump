@@ -27,20 +27,20 @@ $verificationLimiter = config('fortify.limiters.verification', '6,1');
 
 Route::middleware('guest')->group(function () {
     Route::get('match/register', [RegisteredUserController::class, 'create'])
-        ->name('match.register');
+        ->name('register');
 
     Route::post('match/register', [RegisteredUserController::class, 'store'])
-        ->name('match.register.store');
+        ->name('register.store');
 
     Route::get('match/login', [AuthenticatedSessionController::class, 'create'])
-        ->name('match.login');
+        ->name('login');
 
     Route::post('match/login', [AuthenticatedSessionController::class, 'store'])
         ->middleware(array_values(array_filter([
             'guest',
             config('fortify.limiters.login') ? 'throttle:'.config('fortify.limiters.login') : null,
         ])))
-        ->name('match.login.store');
+        ->name('login.store');
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');

@@ -33,7 +33,7 @@
             <h1 class="display-4 fw-bold mb-5">Bem-vindo(a)</h1>
             <p class="lead mb-4">Selecione seu tipo de acesso para continuar.</p>
             <div class="d-grid gap-3 col-md-8 mx-auto">
-                <a href="{{ route('match.login') }}" class="btn btn-primary btn-lg py-3 shadow">
+                <a href="{{ route('login') }}" class="btn btn-primary btn-lg py-3 shadow">
                     <i class="bi bi-person-badge"></i> Acesso Match
                 </a>
             </div>
