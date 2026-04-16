@@ -1,7 +1,7 @@
 <div>
     <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-            <h1 class="text-3xl font-bold text-heart-foreground">Seus matches</h1>
+            <h1 class="text-3xl font-bold text-heart-foreground">Pessoas compatíveis com você</h1>
             <p class="mt-1 text-sm text-heart-muted-foreground">Ordenados por compatibilidade (filtro: mesma resposta na pergunta 20 e convergência nas perguntas 4–6). O percentual combina modelo de relacionamento e de amizade cristã.</p>
         </div>
         <div class="flex items-center gap-2">

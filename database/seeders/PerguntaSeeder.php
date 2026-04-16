@@ -12,7 +12,7 @@ class PerguntaSeeder extends Seeder
         $dados = [
             [
                 'ordem' => 1,
-                'texto' => 'Em um fim de semana ideal você prefere:',
+                'texto' => 'Em um fim de semana ideal, você prefere:',
                 'opcoes' => [
                     'A' => 'Estar com um grupo de amigos ou evento da igreja',
                     'B' => 'Um encontro com poucas pessoas próximas',
@@ -32,7 +32,7 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 3,
-                'texto' => 'Em um grupo você normalmente:',
+                'texto' => 'Em um grupo, você normalmente:',
                 'opcoes' => [
                     'A' => 'Puxa conversas e integra as pessoas',
                     'B' => 'Participa ativamente',
@@ -82,7 +82,7 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 8,
-                'texto' => 'Com que frequência você gosta de falar com amigos?',
+                'texto' => 'Com que frequência você gosta de falar com seus amigos?',
                 'opcoes' => [
                     'A' => 'Todos os dias',
                     'B' => 'Algumas vezes por semana',
@@ -96,28 +96,28 @@ class PerguntaSeeder extends Seeder
                 'opcoes' => [
                     'A' => 'Sim',
                     'B' => 'Com pessoas de confiança',
-                    'C' => 'Demora um pouco',
-                    'D' => 'Evito',
+                    'C' => 'Demoro um pouco para me abrir',
+                    'D' => 'Evito me abrir',
                 ],
             ],
             [
                 'ordem' => 10,
-                'texto' => 'Em amizades você tende a:',
+                'texto' => 'Em amizades, você tende a:',
                 'opcoes' => [
                     'A' => 'Investir bastante',
-                    'B' => 'Equilibrar',
+                    'B' => 'Manter equilíbrio',
                     'C' => 'Ser independente',
-                    'D' => 'Ter dificuldade',
+                    'D' => 'Ter dificuldade para investir',
                 ],
             ],
             [
                 'ordem' => 11,
-                'texto' => 'Quando há conflito:',
+                'texto' => 'Quando há conflito, você tende a:',
                 'opcoes' => [
                     'A' => 'Resolver na hora',
                     'B' => 'Conversar depois',
                     'C' => 'Evitar',
-                    'D' => 'Ficar defensivo',
+                    'D' => 'Ficar na defensiva',
                 ],
             ],
             [
@@ -127,12 +127,12 @@ class PerguntaSeeder extends Seeder
                     'A' => 'Falam diretamente',
                     'B' => 'Falam com sensibilidade',
                     'C' => 'Demonstram com atitudes',
-                    'D' => 'Depende',
+                    'D' => 'Depende da situação',
                 ],
             ],
             [
                 'ordem' => 13,
-                'texto' => 'O que é mais importante no relacionamento:',
+                'texto' => 'O que é mais importante em um relacionamento?',
                 'opcoes' => [
                     'A' => 'Companheirismo',
                     'B' => 'Crescimento espiritual',
@@ -142,7 +142,7 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 14,
-                'texto' => 'Você pensa em relacionamento sério:',
+                'texto' => 'Você pensa em um relacionamento sério?',
                 'opcoes' => [
                     'A' => 'Sim, em breve',
                     'B' => 'Sim, no tempo certo',
@@ -152,7 +152,7 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 15,
-                'texto' => 'Sua rotina ideal:',
+                'texto' => 'Sua rotina ideal é:',
                 'opcoes' => [
                     'A' => 'Cheia',
                     'B' => 'Equilibrada',
@@ -162,37 +162,37 @@ class PerguntaSeeder extends Seeder
             ],
             [
                 'ordem' => 16,
-                'texto' => 'Você gosta de atividades da igreja:',
+                'texto' => 'Você gosta de participar das atividades da igreja?',
                 'opcoes' => [
-                    'A' => 'Muito',
-                    'B' => 'Com equilíbrio',
+                    'A' => 'Gosto muito',
+                    'B' => 'Gosto, com equilíbrio',
                     'C' => 'Ocasionalmente',
-                    'D' => 'Pouco',
+                    'D' => 'Gosto pouco',
                 ],
             ],
             [
                 'ordem' => 17,
-                'texto' => 'Sobre servir:',
+                'texto' => 'Sobre servir na igreja, você:',
                 'opcoes' => [
-                    'A' => 'Muito envolvido',
-                    'B' => 'Às vezes',
-                    'C' => 'Quero mais',
+                    'A' => 'Sou muito envolvido',
+                    'B' => 'Participo às vezes',
+                    'C' => 'Quero me envolver mais',
                     'D' => 'Não participo',
                 ],
             ],
             [
                 'ordem' => 18,
-                'texto' => 'Em relacionamentos você se conecta:',
+                'texto' => 'Em relacionamentos, você se conecta:',
                 'opcoes' => [
                     'A' => 'Com facilidade',
                     'B' => 'Com equilíbrio',
                     'C' => 'Com dificuldade',
-                    'D' => 'Não se conecta',
+                    'D' => 'Evito me conectar',
                 ],
             ],
             [
                 'ordem' => 19,
-                'texto' => 'Você precisa de quanto espaço pessoal? :',
+                'texto' => 'De quanto espaço pessoal você precisa?',
                 'opcoes' => [
                     'A' => 'Pouco',
                     'B' => 'Moderado',
