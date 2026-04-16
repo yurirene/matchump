@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('match.login');
 })->name('home');
 
 Route::redirect('/matches', '/match/matches');
