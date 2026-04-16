@@ -10,7 +10,7 @@
                 </div>
             </div>
             <h1 class="text-2xl font-bold tracking-tight text-heart-foreground">Bem-vindo de volta</h1>
-            <p class="text-sm text-heart-muted-foreground">Entre na sua conta Bondlytch para ver matches e compatibilidade.</p>
+            <p class="text-sm text-heart-muted-foreground">Entre na sua conta MatchUMP para ver matches e compatibilidade.</p>
         </div>
 
         {{-- CardContent --}}
