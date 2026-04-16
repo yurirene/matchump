@@ -34,6 +34,6 @@
         @endif
     </div>
     <div class="text-center mt-2">
-        <a class="text-decoration-none" href="{{ route('register') }}">Não tem conta? Registre-se</a>
+        <a class="text-decoration-none" href="{{ route('diretoria.register') }}">Não tem conta? Registre-se</a>
     </div>
 </form>

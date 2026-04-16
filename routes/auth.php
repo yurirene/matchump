@@ -26,21 +26,21 @@ $twoFactorLimiter = config('fortify.limiters.two-factor');
 $verificationLimiter = config('fortify.limiters.verification', '6,1');
 
 Route::middleware('guest')->group(function () {
-    Route::get('match/register', [RegisteredUserController::class, 'create'])
-        ->name('register');
+    Route::get('diretoria/register', [RegisteredUserController::class, 'create'])
+        ->name('diretoria.register');
 
-    Route::post('match/register', [RegisteredUserController::class, 'store'])
-        ->name('register.store');
+    Route::post('diretoria/register', [RegisteredUserController::class, 'store'])
+        ->name('diretoria.register.store');
 
-    Route::get('match/login', [AuthenticatedSessionController::class, 'create'])
-        ->name('login');
+    Route::get('diretoria/login', [AuthenticatedSessionController::class, 'create'])
+        ->name('diretoria.login');
 
-    Route::post('match/login', [AuthenticatedSessionController::class, 'store'])
+    Route::post('diretoria/login', [AuthenticatedSessionController::class, 'store'])
         ->middleware(array_values(array_filter([
             'guest',
             config('fortify.limiters.login') ? 'throttle:'.config('fortify.limiters.login') : null,
         ])))
-        ->name('login.store');
+        ->name('diretoria.login.store');
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');

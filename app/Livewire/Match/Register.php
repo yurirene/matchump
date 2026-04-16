@@ -74,6 +74,6 @@ class Register extends Component
 
     public function render()
     {
-        return view('livewire.register');
+        return view('livewire.match.register');
     }
 }
